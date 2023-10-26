@@ -2,22 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
-public class button1 : MonoBehaviour
+public class InputManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Restart()
+    void Start()
     {
-        SceneManager.LoadScene("pocetna");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
-        {
+        if(true)
             SceneManager.LoadScene("scena2");
-        }
-
     }
 }
