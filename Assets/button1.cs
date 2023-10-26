@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class button1 : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void Restart()
     {
         SceneManager.LoadScene("pocetna");
     }
@@ -14,7 +14,10 @@ public class button1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
             SceneManager.LoadScene("scena2");
-        
+        }
+
     }
 }
