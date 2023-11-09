@@ -1,3 +1,3 @@
 # DeepPrint1
-aplikacija za svetionik
+aplikacija za projekat Svetionik znanja, tim Beograd 
 
