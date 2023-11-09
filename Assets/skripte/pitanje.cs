@@ -18,14 +18,23 @@ public class pitanje : MonoBehaviour
         public int vrednost;
     }
 
+    [System.Serializable]
+    public class JsonWrapper
+    {
+        public List<JsonObject> jsonArray;
+    }
+
     string jsonArrayString = "[{\"pitanje\":\"Nekopitanje1\",\"odgovori\":[{\"odgovor\":\"Nekiodgovor1\",\"vrednost\":5},{\"odgovor\":\"Nekiodgovor2\",\"vrednost\":10}]},{\"pitanje\":\"Nekopitanje2\",\"odgovori\":[{\"odgovor\":\"Nekiodgovor1\",\"vrednost\":10},{\"odgovor\":\"Nekiodgovor2\",\"vrednost\":5}]}]";
 
-    List<JsonObject> jsonArray;
+    JsonWrapper jsonWrapper;
 
-    void Start()
+    public void StartWorking()
     {
-        // Deserialize JSON array into a list of JsonObject
-        jsonArray = JsonUtility.FromJson<List<JsonObject>>(jsonArrayString);
+        // Deserialize JSON array into a JsonWrapper object
+        jsonWrapper = JsonUtility.FromJson<JsonWrapper>("{\"jsonArray\":" + jsonArrayString + "}");
+
+        // Access the list of JsonObjects from the JsonWrapper
+        List<JsonObject> jsonArray = jsonWrapper.jsonArray;
 
         // Iterate through the list
         foreach (JsonObject jsonData in jsonArray)
