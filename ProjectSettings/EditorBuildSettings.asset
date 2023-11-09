@@ -12,7 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/pocetna.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
-    path: Assets/Scenes/scena2.unity
+    path: Assets/Scenes/dobrodosli.unity
     guid: e1b4eeb096c9c434aa70e2ac4b5ac9df
+  - enabled: 1
+    path: Assets/Scenes/pitanje1.unity
+    guid: 23fd6121469854ab8999a8951f8ba834
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: db6d4a30dfb454c96886cc18b8170481, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 3e27266fbe5fe4897b334528a180c537, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 3d9832b1ce7ba4d69bb280226362978c, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 183c6b2d98d3d4c1991f355fbf70c2f3, type: 2}
