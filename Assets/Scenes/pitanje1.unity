@@ -336,11 +336,8 @@ GameObject:
   m_Component:
   - component: {fileID: 374338448}
   - component: {fileID: 374338451}
-  - component: {fileID: 374338454}
-  - component: {fileID: 374338453}
   - component: {fileID: 374338450}
   - component: {fileID: 374338449}
-  - component: {fileID: 374338456}
   - component: {fileID: 374338455}
   m_Layer: 5
   m_Name: odgovor1
@@ -413,31 +410,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 374338450}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: MoveToScene
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 374338453}
-        m_TargetAssemblyTypeName: pitanje, Assembly-CSharp
-        m_MethodName: StartWorking
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &374338450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,32 +449,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374338447}
   m_CullTransparentMesh: 1
---- !u!114 &374338453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374338447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3aad75a6302745f288a9251c27da59e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pitanje1Text: {fileID: 0}
---- !u!114 &374338454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374338447}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3aad75a6302745f288a9251c27da59e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pitanje1Text: {fileID: 0}
 --- !u!114 &374338455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,19 +462,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
---- !u!114 &374338456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374338447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3aad75a6302745f288a9251c27da59e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pitanje1Text: {fileID: 0}
 --- !u!1 &587945804
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,7 +729,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46b3fd318618477e960914e5b695cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mybutton: {fileID: 374338449}
+  mybutton1: {fileID: 374338449}
+  mybutton2: {fileID: 1177234046}
+  mybutton3: {fileID: 1221579100}
   Pitanje1Text: {fileID: 609959514}
 --- !u!1 &889287549
 GameObject:
@@ -833,9 +769,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 14.400024, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &889287551
 MonoBehaviour:
@@ -1131,6 +1067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1177234045}
+  - component: {fileID: 1177234050}
   - component: {fileID: 1177234048}
   - component: {fileID: 1177234047}
   - component: {fileID: 1177234046}
@@ -1269,8 +1206,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46b3fd318618477e960914e5b695cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mybutton: {fileID: 0}
+  mybutton1: {fileID: 0}
+  mybutton2: {fileID: 0}
+  mybutton3: {fileID: 0}
   Pitanje1Text: {fileID: 0}
+--- !u!114 &1177234050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177234044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46b3fd318618477e960914e5b695cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mybutton1: {fileID: 374338449}
+  mybutton2: {fileID: 1177234046}
+  mybutton3: {fileID: 1221579100}
+  Pitanje1Text: {fileID: 609959514}
 --- !u!1 &1221579098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,6 +1236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1221579099}
   - component: {fileID: 1221579102}
+  - component: {fileID: 1221579104}
   - component: {fileID: 1221579101}
   - component: {fileID: 1221579100}
   - component: {fileID: 1221579103}
@@ -1418,8 +1374,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46b3fd318618477e960914e5b695cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mybutton: {fileID: 0}
+  mybutton1: {fileID: 0}
+  mybutton2: {fileID: 0}
+  mybutton3: {fileID: 0}
   Pitanje1Text: {fileID: 0}
+--- !u!114 &1221579104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221579098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46b3fd318618477e960914e5b695cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mybutton1: {fileID: 374338449}
+  mybutton2: {fileID: 1177234046}
+  mybutton3: {fileID: 1221579100}
+  Pitanje1Text: {fileID: 609959514}
 --- !u!1 &1924250741
 GameObject:
   m_ObjectHideFlags: 0
