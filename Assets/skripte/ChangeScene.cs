@@ -8,8 +8,11 @@ using TMPro;
 public class ChangeScene : MonoBehaviour
 {
     public Button mybutton1;
+    public TextMeshProUGUI button1text;
     public Button mybutton2;
+    public TextMeshProUGUI button2text;
     public Button mybutton3;
+    public TextMeshProUGUI button3text;
     int i = 0;
     public TextMeshProUGUI Pitanje1Text;
     [System.Serializable]
@@ -73,15 +76,15 @@ public class ChangeScene : MonoBehaviour
         Debug.Log(pitanje);
         Pitanje1Text.text = pitanje;
 
-        // Iterate through the list
-        /*foreach (JsonObject jsonData in jsonArray)
-        {
-            Debug.Log("Pitanje: " + jsonData.pitanje);
-            foreach (Odgovor odgovor in jsonData.odgovori)
+            //List<JsonObject> jsonOdgovori = jsonArray[i.odgovori];
+            foreach (Odgovor odgovor in jsonArray[i].odgovori)
             {
-                Debug.Log("Odgovor: " + odgovor.odgovor + ", Vrednost: " + odgovor.vrednost);
+                Debug.Log(odgovor.odgovor);
+                Debug.Log(odgovor.vrednost);
+                mybutton1text.text = odgovor.odgovor;
+
             }
-}*/
+
 
 
     }
@@ -93,7 +96,6 @@ public class ChangeScene : MonoBehaviour
     }
 
 }
-
 
 
 

@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+using UnityEngine.SceneManagement;
 
 public class pitanje : MonoBehaviour
 {
-    public TextMeshProUGUI Pitanje1Text;
-    //public Text Pitanje1Text;
+
+    public Text Pitanje1Text;
     [System.Serializable]
     public class JsonObject
     {
@@ -53,7 +53,7 @@ public class pitanje : MonoBehaviour
                 Debug.Log("Odgovor: " + odgovor.odgovor + ", Vrednost: " + odgovor.vrednost);
             }
         }*/
-        
+
 
     }
 }
