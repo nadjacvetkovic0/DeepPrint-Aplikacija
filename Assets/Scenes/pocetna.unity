@@ -1177,7 +1177,6 @@ GameObject:
   - component: {fileID: 1770852203}
   - component: {fileID: 1770852201}
   - component: {fileID: 1770852200}
-  - component: {fileID: 1770852204}
   - component: {fileID: 1770852205}
   m_Layer: 5
   m_Name: chatBotDugme
@@ -1313,18 +1312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a872b599a89496589010ced1e5cce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1770852204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770852198}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15489d71de5ec49f786b6c3fd123afb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1770852205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1395,7 +1382,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: AI CHAT BOT
+  m_text: "ZAPO\u010CNI "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}

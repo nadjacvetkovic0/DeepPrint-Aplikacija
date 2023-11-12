@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class pitanje : MonoBehaviour
 {
+    public TextMeshProUGUI Pitanje1Text;
+    //public Text Pitanje1Text;
     [System.Serializable]
     public class JsonObject
     {
@@ -28,7 +32,7 @@ public class pitanje : MonoBehaviour
 
     JsonWrapper jsonWrapper;
 
-    public void StartWorking()
+    public void Start()
     {
         // Deserialize JSON array into a JsonWrapper object
         jsonWrapper = JsonUtility.FromJson<JsonWrapper>("{\"jsonArray\":" + jsonArrayString + "}");
@@ -36,14 +40,20 @@ public class pitanje : MonoBehaviour
         // Access the list of JsonObjects from the JsonWrapper
         List<JsonObject> jsonArray = jsonWrapper.jsonArray;
 
+        string pitanje = jsonArray[0].pitanje;
+        Debug.Log(pitanje);
+        Pitanje1Text.text= pitanje;
+
         // Iterate through the list
-        foreach (JsonObject jsonData in jsonArray)
+        /*foreach (JsonObject jsonData in jsonArray)
         {
             Debug.Log("Pitanje: " + jsonData.pitanje);
             foreach (Odgovor odgovor in jsonData.odgovori)
             {
                 Debug.Log("Odgovor: " + odgovor.odgovor + ", Vrednost: " + odgovor.vrednost);
             }
-        }
+        }*/
+        
+
     }
 }
