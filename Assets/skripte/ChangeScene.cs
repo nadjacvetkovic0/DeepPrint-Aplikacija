@@ -19,6 +19,8 @@ public class ChangeScene : MonoBehaviour
     public TextMeshProUGUI Button3text;
     int i = 0;
     public TextMeshProUGUI Pitanje1Text;
+
+
     [System.Serializable]
     public class JsonObject
     {
@@ -140,38 +142,54 @@ public class ChangeScene : MonoBehaviour
         // Access the list of JsonObjects from the JsonWrapper
         List<JsonObject> jsonArray = jsonWrapper.jsonArray;
         score = score + jsonArray[i].odgovori[0].vrednost;
-        Debug.Log(jsonArray.Length);
+        Debug.Log(jsonArray.Count);
         i++;
-        PromeniPitanje();
+        if (jsonArray.Count == i) {
+        PlayerPrefs.SetInt("score", score);
+        SceneManager.LoadScene(3);
+        }
+        else PromeniPitanje(); 
     }
 
     void OnButtonClick2()
-    {
-        jsonWrapper = JsonUtility.FromJson<JsonWrapper>("{\"jsonArray\":" + jsonArrayString + "}");
+{
+    jsonWrapper = JsonUtility.FromJson<JsonWrapper>("{\"jsonArray\":" + jsonArrayString + "}");
 
-        // Access the list of JsonObjects from the JsonWrapper
-        List<JsonObject> jsonArray = jsonWrapper.jsonArray;
-        score = score + jsonArray[i].odgovori[1].vrednost;
-        //Debug.Log(score);
-        i++;
-        PromeniPitanje();
-    }
-
-    void OnButtonClick3()
-    {
-        jsonWrapper = JsonUtility.FromJson<JsonWrapper>("{\"jsonArray\":" + jsonArrayString + "}");
-
-        // Access the list of JsonObjects from the JsonWrapper
-        List<JsonObject> jsonArray = jsonWrapper.jsonArray;
-        score = score + jsonArray[i].odgovori[2].vrednost;
-        //Debug.Log(score);
-        i++;
-        PromeniPitanje();
-    }
-
-
+    // Access the list of JsonObjects from the JsonWrapper
+    List<JsonObject> jsonArray = jsonWrapper.jsonArray;
+    score = score + jsonArray[i].odgovori[1].vrednost;
+    //Debug.Log(score);
+    i++;
+    if (jsonArray.Count == i) {
+        PlayerPrefs.SetInt("score", score);
+        SceneManager.LoadScene(3);
+        }
+    else PromeniPitanje(); 
 
 }
+
+void OnButtonClick3()
+{
+    jsonWrapper = JsonUtility.FromJson<JsonWrapper>("{\"jsonArray\":" + jsonArrayString + "}");
+
+    // Access the list of JsonObjects from the JsonWrapper
+    List<JsonObject> jsonArray = jsonWrapper.jsonArray;
+    score = score + jsonArray[i].odgovori[2].vrednost;
+    //Debug.Log(score);
+    i++;
+    if (jsonArray.Count == i) {
+        PlayerPrefs.SetInt("score", score);
+        SceneManager.LoadScene(3);
+        }
+        
+    else PromeniPitanje(); 
+
+}
+}
+
+
+
+
 
 
 

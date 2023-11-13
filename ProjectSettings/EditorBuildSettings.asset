@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/pitanje1.unity
     guid: 23fd6121469854ab8999a8951f8ba834
   - enabled: 1
-    path: Assets/Scenes/pitanje2.unity
+    path: Assets/Scenes/rezS.unity
     guid: 830e5cef173374779a6fb415e4f5eab8
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: db6d4a30dfb454c96886cc18b8170481, type: 2}
