@@ -41,7 +41,10 @@ public class ChangeScene : MonoBehaviour
         public List<JsonObject> jsonArray;
     }
 
-    string jsonArrayString = "[{\"pitanje\":\"Nekopitanje1\",\"odgovori\":[{\"odgovor\":\"Nekiodgovor1\",\"vrednost\":5},{\"odgovor\":\"Nekiodgovor2\",\"vrednost\":10}]},{\"pitanje\":\"Nekopitanje2\",\"odgovori\":[{\"odgovor\":\"Nekiodgovor1\",\"vrednost\":10},{\"odgovor\":\"Nekiodgovor2\",\"vrednost\":5},{\"odgovor\":\"Nekiodgovor3\",\"vrednost\":5}]}]";
+string jsonArrayString = "[{\"pitanje\":\"Da li imate naloge na društvenim mrežama?\",\"odgovori\":[{\"odgovor\":\"Da.\",\"vrednost\":5},{\"odgovor\":\"Ne.\",\"vrednost\":0}]},{\"pitanje\":\"Na koliko društvenih mreža posedujete nalog?\",\"odgovori\":[{\"odgovor\":\"Nemam društvene mreže.\",\"vrednost\":0},{\"odgovor\":\"Na jednoj društvenoj mreži.\",\"vrednost\":5},{\"odgovor\":\"Na više različitih društvenih mreža.\",\"vrednost\":10}]},{\"pitanje\":\"Da li su Vaši profili javni ili privatni?\",\"odgovori\":[{\"odgovor\":\"Javni su.\",\"vrednost\":10},{\"odgovor\":\"Privatni su.\",\"vrednost\":0}]},{\"pitanje\":\"Da li ste na Vašoj profilnoj slici Vi?\",\"odgovori\":[{\"odgovor\":\"Jesam.\",\"vrednost\":10},{\"odgovor\":\"Nisam.\",\"vrednost\":0},{\"odgovor\":\"Profilna mi je slika skinuta sa interneta.\",\"vrednost\":5}]}]";
+
+
+
 
     JsonWrapper jsonWrapper;
 
