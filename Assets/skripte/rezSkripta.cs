@@ -6,15 +6,16 @@ using TMPro;
 
 public class rezSkripta : MonoBehaviour
 {
-    int score;
+    public int score;
+    public int finalScore;
     public TextMeshProUGUI ScoreText;
     // Start is called before the first frame update
     void Start()
     {
         //Debug.Log("PROBAAAAAAAAAAAA");
-        score = PlayerPrefs.GetInt("score", 0);
-        score = 100 - score;
-        string scoreString = score.ToString(); 
+        score = PlayerPrefs.GetInt("score");
+        finalScore = 100 - score;
+        string scoreString = finalScore.ToString(); 
         ScoreText.text = scoreString;
         //Debug.Log("scoreeeeeeeeee");
         //Debug.Log(scoreString);

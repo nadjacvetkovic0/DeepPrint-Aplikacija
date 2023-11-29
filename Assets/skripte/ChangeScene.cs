@@ -41,9 +41,10 @@ public class ChangeScene : MonoBehaviour
         public List<JsonObject> jsonArray;
     }
 
+    List<int> odgovori = new List<int>();
+
+
 string jsonArrayString = "[{\"pitanje\":\"Da li imate naloge na društvenim mrežama?\",\"odgovori\":[{\"odgovor\":\"Da.\",\"vrednost\":5},{\"odgovor\":\"Ne.\",\"vrednost\":0}]},{\"pitanje\":\"Na koliko društvenih mreža posedujete nalog?\",\"odgovori\":[{\"odgovor\":\"Nemam društvene mreže.\",\"vrednost\":0},{\"odgovor\":\"Na jednoj društvenoj mreži.\",\"vrednost\":5},{\"odgovor\":\"Na više različitih društvenih mreža.\",\"vrednost\":10}]},{\"pitanje\":\"Da li su Vaši profili javni ili privatni?\",\"odgovori\":[{\"odgovor\":\"Javni su.\",\"vrednost\":10},{\"odgovor\":\"Privatni su.\",\"vrednost\":0}]},{\"pitanje\":\"Da li ste na Vašoj profilnoj slici Vi?\",\"odgovori\":[{\"odgovor\":\"Jesam.\",\"vrednost\":10},{\"odgovor\":\"Nisam.\",\"vrednost\":0},{\"odgovor\":\"Profilna mi je slika skinuta sa interneta.\",\"vrednost\":5}]}]";
-
-
 
 
     JsonWrapper jsonWrapper;
@@ -137,6 +138,8 @@ string jsonArrayString = "[{\"pitanje\":\"Da li imate naloge na društvenim mre�
         }
         j = 0;
 
+        Debug.Log("usao u promeniPitnaje");
+
     }
     void OnButtonClick1()
     {
@@ -145,10 +148,13 @@ string jsonArrayString = "[{\"pitanje\":\"Da li imate naloge na društvenim mre�
         // Access the list of JsonObjects from the JsonWrapper
         List<JsonObject> jsonArray = jsonWrapper.jsonArray;
         score = score + jsonArray[i].odgovori[0].vrednost;
-        Debug.Log(jsonArray.Count);
         i++;
+        Debug.Log(i);
+        Debug.Log(jsonArray.Count);
+        Debug.Log("?????????");
         if (jsonArray.Count == i) {
         PlayerPrefs.SetInt("score", score);
+        odgovori.Add(0);
         SceneManager.LoadScene(3);
         }
         else PromeniPitanje(); 
@@ -163,8 +169,12 @@ string jsonArrayString = "[{\"pitanje\":\"Da li imate naloge na društvenim mre�
     score = score + jsonArray[i].odgovori[1].vrednost;
     //Debug.Log(score);
     i++;
+    Debug.Log(i);
+    Debug.Log(jsonArray.Count);
+    Debug.Log("!!!!!!!");
     if (jsonArray.Count == i) {
         PlayerPrefs.SetInt("score", score);
+        odgovori.Add(1);
         SceneManager.LoadScene(3);
         }
     else PromeniPitanje(); 
@@ -180,14 +190,23 @@ void OnButtonClick3()
     score = score + jsonArray[i].odgovori[2].vrednost;
     //Debug.Log(score);
     i++;
+    Debug.Log(i);
+    Debug.Log(jsonArray.Count);
+    Debug.Log("**********");
     if (jsonArray.Count == i) {
         PlayerPrefs.SetInt("score", score);
+        odgovori.Add(2);
+        Debug.Log("usao u if");
         SceneManager.LoadScene(3);
         }
         
     else PromeniPitanje(); 
-
 }
+
+/*PlayerPrefs.SetInt("odgovori_", odgovori.Count);
+ 
+for(int i = 0; i < odgovori.Count; i++)
+    PlayerPrefs.SetInt("odgovori_" + i, odgovori[i]);*/
 }
 
 
