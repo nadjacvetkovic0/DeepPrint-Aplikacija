@@ -1,3 +1,4 @@
 # DeepPrint1
-aplikacija za projekat Svetionik znanja, tim Beograd 
+Aplikacija za projekat Svetionik znanja - tim Beograd 
+Aplikacija je nakon prezentacije ideje dobila 3. mesto na takmicenju
 
